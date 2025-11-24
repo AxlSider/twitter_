@@ -47,7 +47,8 @@ bash
 git clone [https://github.com/your-username/dk-twittrix.git](https://github.com/your-username/dk-twittrix.git)
 
 # Enter the directory
-cd dk-twittrix
+option 1: cd dk-twittrix 
+option 2: cd C:/xampp/htdocs/twitter
 
 # Install PHP dependencies
 composer install
@@ -104,3 +105,24 @@ php artisan serve
 ![Mobile Screenshot](screenshots/tweets.png)
 ![Mobile Screenshot](screenshots/mobileprofile.png)
 
+### Credits & AI Tools Used
+
+**Primary AI Tool:** Google Gemini
+
+I utilized Google Gemini as an interactive pair programmer throughout the development lifecycle. Below is a detailed breakdown of how AI was used to assist in specific areas:
+
+### 1. Database & Migration Troubleshooting
+* **Conflict Resolution:** I encountered `SQLSTATE` errors because I had manually created tables in phpMyAdmin that conflicted with Laravel's migration files. Gemini provided the strategy to use `php artisan migrate:fresh` and the SQL commands (`SET FOREIGN_KEY_CHECKS=0`) to force-drop stubborn tables.
+* **Schema Design:** Gemini assisted in defining the correct relationship syntax (e.g., `$table->foreignId('user_id')->constrained()`) to ensure the `tweets` and `likes` tables were properly linked to `users`.
+
+### 2. Backend Logic Refactoring
+* **AJAX Conversion:** Initially, the "Like" button used a standard HTML Form which caused the page to reload. I asked Gemini to refactor this into a JavaScript `fetch()` request. The AI provided the updated `TweetController` logic to return JSON responses instead of Redirects.
+* **Authorization:** Gemini provided the code for `TweetPolicy` to ensure users could only Edit/Delete their own tweets using Laravel's `Gate` functionality.
+
+### 3. UI/UX Design Iterations
+* **The "Lights Out" Theme:** I wanted a specific dark-blue design similar to X (Twitter). Gemini generated the specific Hex color codes (`#0f172a` for background, `#1e293b` for headers) to achieve this look.
+* **Debugging Invisible Text:** When switching to Dark Mode, the text remained white-on-white (invisible). Gemini diagnosed that Tailwind classes weren't compiling immediately and provided a fix using inline styles to force the contrast visibility.
+* **Layout Adjustments:** The AI helped strip out the default "Card" borders to achieve the seamless, single-column feed layout I requested.
+
+### 4. JavaScript Functionality
+* **Character Counter:** Gemini generated the JavaScript logic to count characters in real-time and change the counter color to red when the user approaches the 280-character limit.
