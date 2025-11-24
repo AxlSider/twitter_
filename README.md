@@ -126,3 +126,11 @@ I utilized Google Gemini as an interactive pair programmer throughout the develo
 
 ### 4. JavaScript Functionality
 * **Character Counter:** Gemini generated the JavaScript logic to count characters in real-time and change the counter color to red when the user approaches the 280-character limit.
+
+
+### The Website link.
+I have used the laravel cloud for the domain although the domain is still verifying and it's already been three hours so i had to use a temporary link/domain
+https://twitter-2-main-7uhbjg.laravel.cloud/register
+
+The original domain is called DKTwittrix.com
+![Domain SS](screenshots/domainss.jpg)
