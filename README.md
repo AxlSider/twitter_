@@ -4,7 +4,7 @@ Welcome to **D&K Twittrix**, a social media micro-blogging application built wit
 
 This project was developed to replicate the core experience of Twitter (X), focusing on a clean, "Lights Out" dark mode design and a seamless user experience. It allows users to register, share thoughts, interact with others via real-time likes, and manage their profiles.
 
-## 🚀 Features Implemented
+##  Features Implemented
 
 I focused on building a robust backend with a responsive, modern frontend. Here is what the app can do:
 
@@ -34,7 +34,7 @@ I focused on building a robust backend with a responsive, modern frontend. Here 
 
 ---
 
-## 🛠️ Installation Instructions
+## Installation Instructions
 
 If you want to run this project on your local machine, follow these steps:
 
@@ -80,7 +80,7 @@ php artisan migrate
 php artisan serve
 
 
-## 📸 Application Screenshots
+## Application Screenshots
 
 **1. The Feed (Dark Mode)**
 ![Feed Screenshot](screenshots/feed.png)
